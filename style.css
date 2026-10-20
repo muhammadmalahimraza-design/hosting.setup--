@@ -1,0 +1,228 @@
+/* ===== Login Page CSS ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* Main container */
+.login-container {
+    width: 100%;
+    max-width: 1400px;
+    min-height: 700px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background: #06245f;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Left login panel */
+.login-panel {
+    background: #06245f;
+    color: #ffffff;
+    padding: 55px 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Logo */
+.logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo img,
+.logo svg {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Heading */
+.login-panel h1 {
+    color: #ffffff;
+    font-size: clamp(25px, 2.5vw, 36px);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+
+.login-panel input {
+    width: 100%;
+    height: 53px;
+    padding: 0 17px;
+    margin-bottom: 12px;
+    background: #153875;
+    border: 1px solid #1d417f;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.login-panel input::placeholder {
+    color: #b5c6e4;
+}
+
+.login-panel input:focus {
+    border-color: #4b8cff;
+    background: #193e80;
+    box-shadow: 0 0 0 3px rgba(75, 140, 255, 0.15);
+}
+
+
+.login-panel a {
+    color: #a9c7ff;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.login-panel a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin: 3px 0 35px;
+}
+
+.login-panel button {
+    width: 100%;
+    min-height: 49px;
+    background: #2055c5;
+    color: #ffffff;
+    border: none;
+    border-radius: 9px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-panel button:hover {
+    background: #3473eb;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #b5c6e4;
+    font-size: 13px;
+    margin: 25px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    height: 1px;
+    flex: 1;
+    background: #46618f;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.social-buttons button {
+    background: #153875;
+    border: 1px solid #204582;
+    font-weight: 400;
+}
+
+.social-buttons button:hover {
+    background: #204a8e;
+}
+
+.create-account {
+    text-align: center;
+    color: #b5c6e4;
+    font-size: 13px;
+    margin-top: 24px;
+}
+
+.create-account a {
+    color: #75a8ff;
+    font-weight: 500;
+}
+
+.login-image {
+    min-height: 700px;
+    background-color: #e6e2d9;
+    background-image: url('images/study.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 900px) {
+    body {
+        padding: 18px;
+    }
+
+    .login-container {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        min-height: auto;
+        border-radius: 20px;
+    }
+
+    .login-panel {
+        padding: 40px 30px;
+    }
+
+    .login-image {
+        display: none;
+    }
+
+    .logo img,
+    .logo svg {
+        max-width: 230px;
+    }
+
+    .login-panel h1 {
+        font-size: 27px;
+    }
+}
+
+@media (max-width: 400px) {
+    body {
+        padding: 10px;
+    }
+
+    .login-panel {
+        padding: 30px 20px;
+    }
+
+    .login-panel h1 {
+        font-size: 23px;
+    }
+}
